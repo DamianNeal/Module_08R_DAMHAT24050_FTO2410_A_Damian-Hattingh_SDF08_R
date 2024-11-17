@@ -9,45 +9,122 @@
 </head>
 <body>
     <footer class="bg-[#659f8f] dark:bg-[#313131]">
+        <!-- Main container -->
         <div class="container">
-            <footer class="bg-[#659f8f] dark:bg-[#313131] ">
-                <div class="container px-6 py-12 mx-auto ml-40 pr-[200px]">
+            <!-- Container with responsive padding:
+                 - Default: px-12 (3rem left/right)
+                 - Small screens: px-16 (4rem)
+                 - Medium screens: px-20 (5rem)
+                 - Large screens: ml-40 (10rem left) and pr-[200px] right
+                 - py-12: padding top/bottom 3rem -->
+            <div class="container px-12 sm:px-16  px-20 py-12 mx-auto lg:ml-40 lg:pr-[200px]">
+                <!-- Mobile and Tablet Layout - hidden on large screens -->
+                <div class="lg:hidden">
+                    <!-- Top section with 20px margin -->
+                    <div class="mt-[20px]">
+                        <!-- Heading with max width, semi-bold weight, padding, and font settings -->
+                        <h1 class="max-w-lg font-semibold pb-5 text-[21px] pt-3 text-gray-700 font-sans">
+                            Subscribe to our newsletter for updates.
+                        </h1>
+                        <!-- Flex container: column on mobile, row on small screens
+                             with appropriate spacing -->
+                        <div class="flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0">
+                            <!-- Input field with rounded corners, height, width, and padding -->
+                            <input 
+                                class="rounded-md h-10 w-50 pl-4" 
+                                id="email" 
+                                type="text" 
+                                placeholder="Email Address"
+                            >
+                            <!-- Subscribe button with specific width, padding, background color,
+                                 text color, font weight, and centered content -->
+                            <button class="w-30 px-6 py-2.5 bg-[#d86943] text-gray-200 font-semibold text-[15px] rounded-md h-10 items-center justify-center flex">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Grid layout for links: 2 columns on medium screens, 16rem gap -->
+                    <div class="grid md:grid-cols-2 gap-16 mt-8">
+                        <div>
+                            <!-- Section heading with gray color, padding, and semi-bold weight -->
+                            <p class="text-gray-700 pb-4 font-semibold">Quick Link</p>
+                            <!-- Grid of links with 5px gaps -->
+                            <div class="grid gap-[5px]">
+                                <a class="text-gray-700" href="#">Home</a>
+                                <a class="text-gray-700" href="#">Who We Are</a>
+                                <a class="text-gray-700" href="#">Our Philosophy</a>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 pb-4 font-semibold">Technologies</p>
+                            <div class="grid gap-[5px]">
+                                <a class="text-gray-700" href="#">HTML</a>
+                                <a class="text-gray-700" href="#">CSS</a>
+                                <a class="text-gray-700" href="#">JavaScript</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Layout - hidden by default, shown on large screens -->
+                <div class="hidden lg:block">
+                    <!-- Flex container with top margin -->
                     <div class="flex mt-[20px]">
+                        <!-- Subscribe section spanning 2 columns on small screens -->
                         <div class="sm:col-span-2">
-                            <h1 class="max-w-lg font-semibold pb-5 text-[21px] pt-3 text-gray-700 font-sans " >Subscribe to our newsletter for updates.</h1> <!-- Updated entry-->
+                            <h1 class="max-w-lg font-semibold pb-5 text-[21px] pt-3 text-gray-700 font-sans">
+                                Subscribe to our newsletter for updates.
+                            </h1>
+                            <!-- Horizontal flex container with spacing -->
                             <div class="flex space-x-3">
-                                <input class="rounded-md h-10 w-50 pl-4" id="email" type="text" placeholder="Email Address"><!-- Updated entry-->
-                                <button class="w-30 px-6 py-2.5 bg-[#d86943] text-gray-200 font-semibold text-[15px] rounded-md h-10 items-center justify-center flex"><!-- Updated entry-->
+                                <input 
+                                    class="rounded-md h-10 w-50 pl-4" 
+                                    id="email" 
+                                    type="text" 
+                                    placeholder="Email Address"
+                                >
+                                <button class="w-30 px-6 py-2.5 bg-[#d86943] text-gray-200 font-semibold text-[15px] rounded-md h-10 items-center justify-center flex">
                                     Subscribe
                                 </button>
                             </div>
                         </div>
+                        <!-- Quick Links section with left margin -->
                         <div class="ml-60">
-                            <p class="text-gray-700 pb-4 pt-3 font-semibold ">Quick Link</p><!-- Updated entry-->
-                            <div class="grid gap-[5px]"><!-- Updated entry-->
-                                <a class="text-gray-700" href="#">Home</a><!-- Updated entry-->
-                                <a class="text-gray-700" href="#">Who We Are</a><!-- Updated entry-->
-                                <a class="text-gray-700" href="#">Our Philosophy</a><!-- Updated entry-->
+                            <p class="text-gray-700 pb-4 pt-3 font-semibold">Quick Link</p>
+                            <div class="grid gap-[5px]">
+                                <a class="text-gray-700" href="#">Home</a>
+                                <a class="text-gray-700" href="#">Who We Are</a>
+                                <a class="text-gray-700" href="#">Our Philosophy</a>
                             </div>
                         </div>
+                        <!-- Technologies section with left margin -->
                         <div class="ml-60">
-                            <p class="text-gray-700 pb-4 pt-3 font-semibold">Technologies</p><!-- Updated entry-->
-                            <div class="grid gap-[5px]"><!-- Updated entry-->
-                                <a class="text-gray-700" href="#">HTML</a><!-- Updated entry-->
-                                <a class="text-gray-700" href="#">CSS</a><!-- Updated entry-->
-                                <a class="text-gray-700" href="#">JavaScript</a><!-- Updated entry-->
+                            <p class="text-gray-700 pb-4 pt-3 font-semibold">Technologies</p>
+                            <div class="grid gap-[5px]">
+                                <a class="text-gray-700" href="#">HTML</a>
+                                <a class="text-gray-700" href="#">CSS</a>
+                                <a class="text-gray-700" href="#">JavaScript</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <hr class="my-6 border-[#d86943]">
-                    
-                    <div class="flex">
-                        <a href="#">
-                            <img class="w-auto h-7 mb-10 pt-[3px]" src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt=""><!-- Updated entry-->
-                        </a>
-                    </div>
+                </div>
+                
+                <!-- Horizontal line with margin and custom color -->
+                <hr class="my-6 border-[#d86943]">
+                
+                <!-- Logo container -->
+                <div class="flex">
+                    <a href="#">
+                        <!-- Logo image with auto width, specific height, margin, and padding -->
+                        <img 
+                            class="w-auto h-7 mb-10 pt-[3px]" 
+                            src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" 
+                            alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
-
 </body>
 </html>
